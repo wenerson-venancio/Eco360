@@ -27,9 +27,10 @@ class Header extends StatelessWidget {
                   icon: Icon(
                     Icons.more_vert_outlined,
                     color: Colors.white,
-                  )),
+                  )
+              ),
             ],
-          ),
+          ), 
         ),
       ],
     );
