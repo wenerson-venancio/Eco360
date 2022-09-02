@@ -1,0 +1,41 @@
+<svg id="Camada_4" data-name="Camada 4" xmlns="http://www.w3.org/2000/svg" viewBox="-150 -150 600 600">
+    <rect x="135.05" y="7" width="95.15" height="35.31" rx="8.71" fill="#fff" stroke="#a7c4d2" stroke-miterlimit="10"
+        stroke-width="14" />
+    <rect x="173.44" y="42.31" width="20.95" height="25.11" fill="#fff" stroke="#a7c4d2" stroke-miterlimit="10"
+        stroke-width="14" />
+    <path
+        d="M51.33,67.42H219.6a25.17,25.17,0,0,1,25.17,25.17V228a0,0,0,0,1,0,0H26.16a0,0,0,0,1,0,0V92.59A25.17,25.17,0,0,1,51.33,67.42Z"
+        fill="#fff" stroke="#a7c4d2" stroke-miterlimit="10" stroke-width="14" />
+    <rect x="7" y="233.01" width="259.76" height="44.35" rx="9.64" fill="#fff" stroke="#a7c4d2" stroke-miterlimit="10"
+        stroke-width="14" />
+    <rect x="147.5" y="92.16" width="81.22" height="21.41" rx="6.71" fill="#a7c4d2" />
+    <rect x="148.29" y="122.49" width="18.64" height="18.64" rx="5.1" fill="#a7c4d2" stroke="#fff"
+        stroke-miterlimit="10" />
+    <rect x="148.58" y="145.43" width="18.64" height="18.64" rx="5.1" fill="#a7c4d2" stroke="#fff"
+        stroke-miterlimit="10" />
+    <rect x="148.58" y="167.86" width="18.64" height="18.64" rx="5.1" fill="#a7c4d2" stroke="#fff"
+        stroke-miterlimit="10" />
+    <path d="M234.43,230.85a36.44,36.44,0,1,0-57.1,1.17" transform="translate(-118.47 -114.54)" fill="#fff"
+        stroke="#0f69b2" stroke-miterlimit="10" stroke-width="7" />
+    <path
+        d="M206.07,198.57c2,0,4.12,1.31,4.12,3.37a3.15,3.15,0,0,0,6.3,0c0-4.25-3.18-7.81-7.3-9v-.5a3.07,3.07,0,0,0-3.12-3.06,3.13,3.13,0,0,0-3.19,3.06v.5a9.49,9.49,0,0,0-7.3,9c0,5.43,4.93,9.42,10.43,9.42,2,0,4.12,1.32,4.12,3.38s-2.13,3.37-4.12,3.37-4.12-1.31-4.12-3.37a3.08,3.08,0,0,0-3.13-3.06,3.12,3.12,0,0,0-3.12,3.06c0,4.24,3.19,7.8,7.31,9V224a3.15,3.15,0,0,0,6.3,0v-.25c4.12-1.19,7.31-4.69,7.24-9,0-5.44-5-9.43-10.42-9.43-2,0-4.12-1.31-4.12-3.37S204.07,198.57,206.07,198.57Z"
+        transform="translate(-118.47 -114.54)" fill="#0f69b2" />
+    <line x1="43.01" y1="118.98" x2="128.67" y2="118.98" fill="#fff" stroke="#a7c4d2" stroke-miterlimit="10"
+        stroke-width="14" />
+    <rect x="170.71" y="122.64" width="18.64" height="18.64" rx="5.1" fill="#a7c4d2" stroke="#fff"
+        stroke-miterlimit="10" />
+    <rect x="171" y="145.58" width="18.64" height="18.64" rx="5.1" fill="#a7c4d2" stroke="#fff"
+        stroke-miterlimit="10" />
+    <rect x="171" y="168.01" width="18.64" height="18.64" rx="5.1" fill="#a7c4d2" stroke="#fff"
+        stroke-miterlimit="10" />
+    <rect x="192.71" y="122.64" width="18.64" height="18.64" rx="5.1" fill="#a7c4d2" stroke="#fff"
+        stroke-miterlimit="10" />
+    <rect x="193" y="145.58" width="18.64" height="18.64" rx="5.1" fill="#a7c4d2" stroke="#fff"
+        stroke-miterlimit="10" />
+    <rect x="193" y="168.01" width="18.64" height="18.64" rx="5.1" fill="#a7c4d2" stroke="#fff"
+        stroke-miterlimit="10" />
+    <rect x="214.71" y="122.64" width="13.79" height="18.64" rx="5.1" fill="#a7c4d2" stroke="#fff"
+        stroke-miterlimit="10" />
+    <rect x="214.93" y="145.43" width="13.79" height="41.22" rx="5.1" fill="#a7c4d2" stroke="#fff"
+        stroke-miterlimit="10" />
+</svg>
