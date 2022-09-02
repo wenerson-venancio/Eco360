@@ -16,9 +16,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar(),
-      body: ListView(
-        physics: const BouncingScrollPhysics(
-            parent: AlwaysScrollableScrollPhysics()),
+      body: Column(
         children: [
           Stack(
             children: [
@@ -95,155 +93,169 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          Container(
-            transform: Matrix4.translationValues(0, -55, 0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 180,
-                        width: 180,
-                        child: Column(
-                          
+          GestureDetector(
+            onTap: () => print('wenerson'),
+            child: Container(
+              transform: Matrix4.translationValues(0, -55, 0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 180,
+                          width: 180,
+                        
+                          child: SvgPicture.asset('assets/menu_caixa.svg'),
+                          decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(Radius.circular(5)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black26,
+                                  blurRadius: 5,
+                                )
+                              ]),
                         ),
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(5)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black26,
-                                blurRadius: 5,
-                              )
-                            ]),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Container(
-                        height: 180,
-                        width: 180,
-                        child: SvgPicture.asset('assets/menu_receber.svg'),
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(5)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black26,
-                                blurRadius: 5,
-                              )
-                            ]),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        GestureDetector(
+                          onTap: () => print('contas a receber'),
+                          child: Container(
+                            height: 180,
+                            width: 180,
+                            child: SvgPicture.asset('assets/menu_receber.svg'),
+                            decoration: const BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(Radius.circular(5)),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black26,
+                                    blurRadius: 5,
+                                  )
+                                ]),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
           const SizedBox(
             height: 10,
           ),
-          Container(
-            transform: Matrix4.translationValues(0, -55, 0),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 180,
-                        width: 180,
-                        child: Container(
-                            height: 100,
-                            width: 100,
-                            child: SvgPicture.asset('assets/menu_pagar.svg')),
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(5)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black26,
-                                blurRadius: 5,
-                              )
-                            ]),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Container(
-                        height: 180,
-                        width: 180,
-                        child: SvgPicture.asset('assets/menu_vendas.svg'),
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(5)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black26,
-                                blurRadius: 5,
-                              )
-                            ]),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+          GestureDetector(
+            onTap: () => print('contas a pagar'),
+            child: Container(
+              transform: Matrix4.translationValues(0, -55, 0),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 180,
+                          width: 180,
+                          child: SvgPicture.asset('assets/menu_pagar.svg'),
+                          decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(Radius.circular(5)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black26,
+                                  blurRadius: 5,
+                                )
+                              ]),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        GestureDetector(
+                          onTap: () => print('Vendas'),
+                          child: Container(
+                            height: 180,
+                            width: 180,
+                            child: SvgPicture.asset('assets/menu_vendas.svg'),
+                            decoration: const BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(Radius.circular(5)),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black26,
+                                    blurRadius: 5,
+                                  )
+                                ]),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
           const SizedBox(
             height: 10,
           ),
-          Container(
-            transform: Matrix4.translationValues(0, -55, 0),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 180,
-                        width: 180,
-                        child: SvgPicture.asset('assets/menu_registradora.svg'),
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(5)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black26,
-                                blurRadius: 5,
-                              )
-                            ]),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Container(
-                        height: 180,
-                        width: 180,
-                        child: SvgPicture.asset(
-                          'assets/menu_estoque.svg',
-                          width: 100,
-                          height: 100,
+          GestureDetector(
+            onTap: () => print('registradora'),
+            child: Container(
+              transform: Matrix4.translationValues(0, -55, 0),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 180,
+                          width: 180,
+                          child: SvgPicture.asset('assets/menu_registradora.svg'),
+                          decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(Radius.circular(5)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black26,
+                                  blurRadius: 5,
+                                )
+                              ]),
                         ),
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(5)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black26,
-                                blurRadius: 5,
-                              )
-                            ]),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        GestureDetector(
+                          onTap: () => print('estoque'),
+                          child: Container(
+                            height: 180,
+                            width: 180,
+                            child: SvgPicture.asset(
+                              'assets/menu_estoque.svg',
+                              width: 100,
+                              height: 100,
+                            ),
+                            decoration: const BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(Radius.circular(5)),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black26,
+                                    blurRadius: 5,
+                                  )
+                                ]),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ],
