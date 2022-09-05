@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: _appBar(),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Stack(
             children: [
@@ -94,166 +95,81 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           GestureDetector(
-            onTap: () => print('wenerson'),
-            child: Container(
-              transform: Matrix4.translationValues(0, -55, 0),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 180,
-                          width: 180,
-                        
-                          child: SvgPicture.asset('assets/menu_caixa.svg'),
-                          decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.all(Radius.circular(5)),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black26,
-                                  blurRadius: 5,
-                                )
-                              ]),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        GestureDetector(
-                          onTap: () => print('contas a receber'),
-                          child: Container(
-                            height: 180,
-                            width: 180,
-                            child: SvgPicture.asset('assets/menu_receber.svg'),
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.all(Radius.circular(5)),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black26,
-                                    blurRadius: 5,
-                                  )
-                                ]),
+                  Row(
+                    children: [
+                      Container(
+                        transform: Matrix4.translationValues(0, -50, 0),
+                        height: 180,
+                        width: 180,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
                           ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 10,
+
+                            )
+                          ]
                         ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          GestureDetector(
-            onTap: () => print('contas a pagar'),
-            child: Container(
-              transform: Matrix4.translationValues(0, -55, 0),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 180,
-                          width: 180,
-                          child: SvgPicture.asset('assets/menu_pagar.svg'),
-                          decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.all(Radius.circular(5)),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black26,
-                                  blurRadius: 5,
-                                )
-                              ]),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        GestureDetector(
-                          onTap: () => print('Vendas'),
-                          child: Container(
-                            height: 180,
-                            width: 180,
-                            child: SvgPicture.asset('assets/menu_vendas.svg'),
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.all(Radius.circular(5)),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black26,
-                                    blurRadius: 5,
-                                  )
-                                ]),
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          GestureDetector(
-            onTap: () => print('registradora'),
-            child: Container(
-              transform: Matrix4.translationValues(0, -55, 0),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 180,
-                          width: 180,
-                          child: SvgPicture.asset('assets/menu_registradora.svg'),
-                          decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.all(Radius.circular(5)),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black26,
-                                  blurRadius: 5,
-                                )
-                              ]),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        GestureDetector(
-                          onTap: () => print('estoque'),
-                          child: Container(
-                            height: 180,
-                            width: 180,
-                            child: SvgPicture.asset(
-                              'assets/menu_estoque.svg',
-                              width: 100,
-                              height: 100,
+                        child: Column(
+                          children: [
+                            SvgPicture.asset(
+                              'assets/menu_caixa.svg',
+                              height: 160,
                             ),
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.all(Radius.circular(5)),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black26,
-                                    blurRadius: 5,
-                                  )
-                                ]),
-                          ),
+                            Container(
+                                transform: Matrix4.translationValues(0, -20, 0),
+                                height: 20,
+                                child: const Text(
+                                  'Fluxo de Caixa',
+                                  style: TextStyle(color: Color.fromARGB(255, 59, 95, 126), fontSize: 16),
+                                )),
+                          ],
                         ),
-                      ],
-                    ),
-                  )
+                      ),
+                      const SizedBox(width: 10,),
+                      Container(
+                        transform: Matrix4.translationValues(0, -50, 0),
+                        height: 180,
+                        width: 180,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 10,
+
+                            )
+                          ]
+                        ),
+                        child: Column(
+                          children: [
+                            SvgPicture.asset(
+                              'assets/menu_caixa.svg',
+                              height: 160,
+                            ),
+                            Container(
+                                transform: Matrix4.translationValues(0, -20, 0),
+                                height: 20,
+                                child: const Text(
+                                  'Fluxo de Caixa',
+                                  style: TextStyle(color: Color.fromARGB(255, 59, 95, 126), fontSize: 16),
+                                )),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
