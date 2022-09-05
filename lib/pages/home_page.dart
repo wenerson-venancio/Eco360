@@ -94,79 +94,243 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
+
+
+          //Daqui para baixo começa os BottomCards
+
           GestureDetector(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Column(
                 children: [
-                  Row(
+                  Column(
                     children: [
-                      Container(
-                        transform: Matrix4.translationValues(0, -50, 0),
-                        height: 180,
-                        width: 180,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black26,
-                              blurRadius: 10,
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                transform: Matrix4.translationValues(0, -50, 0),
+                                height: 180,
+                                width: 180,
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(5),
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
 
-                            )
-                          ]
-                        ),
-                        child: Column(
-                          children: [
-                            SvgPicture.asset(
-                              'assets/menu_caixa.svg',
-                              height: 160,
+                                    )
+                                  ]
+                                ),
+                                child: Column(
+                                  children: [
+                                    SvgPicture.asset(
+                                      'assets/fluxo_caixa.svg',
+                                      height: 160,
+                                    ),
+                                    Container(
+                                        transform: Matrix4.translationValues(0, -20, 0),
+                                        height: 20,
+                                        child: const Text(
+                                          'Fluxo de Caixa',
+                                          style: TextStyle(color: Color.fromARGB(255, 59, 95, 126), fontSize: 16),
+                                        )),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(width: 10,),
+                          Container(
+                            transform: Matrix4.translationValues(0, -50, 0),
+                            height: 180,
+                            width: 180,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(5),
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 10,
+
+                                )
+                              ]
                             ),
-                            Container(
-                                transform: Matrix4.translationValues(0, -20, 0),
-                                height: 20,
-                                child: const Text(
-                                  'Fluxo de Caixa',
-                                  style: TextStyle(color: Color.fromARGB(255, 59, 95, 126), fontSize: 16),
-                                )),
-                          ],
-                        ),
+                            child: Column(
+                              children: [
+                                SvgPicture.asset(
+                                  'assets/a receber.svg',
+                                  height: 160,
+                                ),
+                                Container(
+                                    transform: Matrix4.translationValues(0, -20, 0),
+                                    height: 20,
+                                    child: const Text(
+                                      'A Receber',
+                                      style: TextStyle(color: Color.fromARGB(255, 59, 95, 126), fontSize: 16),
+                                    )),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-                      const SizedBox(width: 10,),
-                      Container(
-                        transform: Matrix4.translationValues(0, -50, 0),
-                        height: 180,
-                        width: 180,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black26,
-                              blurRadius: 10,
+                      const SizedBox(height: 10,),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                transform: Matrix4.translationValues(0, -50, 0),
+                                height: 180,
+                                width: 180,
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(5),
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
 
-                            )
-                          ]
-                        ),
-                        child: Column(
-                          children: [
-                            SvgPicture.asset(
-                              'assets/menu_caixa.svg',
-                              height: 160,
+                                    )
+                                  ]
+                                ),
+                                child: Column(
+                                  children: [
+                                    SvgPicture.asset(
+                                      'assets/menu_pagar.svg',
+                                      height: 160,
+                                    ),
+                                    Container(
+                                        transform: Matrix4.translationValues(0, -20, 0),
+                                        height: 20,
+                                        child: const Text(
+                                          'A Pagar',
+                                          style: TextStyle(color: Color.fromARGB(255, 59, 95, 126), fontSize: 16),
+                                        )),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(width: 10,),
+                          Container(
+                            transform: Matrix4.translationValues(0, -50, 0),
+                            height: 180,
+                            width: 180,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(5),
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 10,
+
+                                )
+                              ]
                             ),
-                            Container(
-                                transform: Matrix4.translationValues(0, -20, 0),
-                                height: 20,
-                                child: const Text(
-                                  'Fluxo de Caixa',
-                                  style: TextStyle(color: Color.fromARGB(255, 59, 95, 126), fontSize: 16),
-                                )),
-                          ],
-                        ),
+                            child: Column(
+                              children: [
+                                SvgPicture.asset(
+                                  'assets/menu_vendas.svg',
+                                  height: 160,
+                                ),
+                                Container(
+                                    transform: Matrix4.translationValues(0, -20, 0),
+                                    height: 20,
+                                    child: const Text(
+                                      'Vendas',
+                                      style: TextStyle(color: Color.fromARGB(255, 59, 95, 126), fontSize: 16),
+                                    )),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 10,),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                transform: Matrix4.translationValues(0, -50, 0),
+                                height: 180,
+                                width: 180,
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(10),
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+
+                                    )
+                                  ]
+                                ),
+                                child: Column(
+                                  children: [
+                                    SvgPicture.asset(
+                                      'assets/registradora.svg',
+                                      height: 160,
+                                    ),
+                                    Container(
+                                        transform: Matrix4.translationValues(0, -20, 0),
+                                        height: 20,
+                                        child: const Text(
+                                          'Registradora',
+                                          style: TextStyle(color: Color.fromARGB(255, 59, 95, 126), fontSize: 16),
+                                        )),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(width: 10,),
+                          Container(
+                            transform: Matrix4.translationValues(0, -50, 0),
+                            height: 180,
+                            width: 180,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(10),
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 10,
+
+                                )
+                              ]
+                            ),
+                            child: Column(
+                              children: [
+                                SvgPicture.asset(
+                                  'assets/estoque-lineout2.svg',
+                                  height: 160,
+                                ),
+                                Container(
+                                    transform: Matrix4.translationValues(0, -20, 0),
+                                    height: 20,
+                                    child: const Text(
+                                      'Fluxo de Caixa',
+                                      style: TextStyle(color: Color.fromARGB(255, 59, 95, 126), fontSize: 16),
+                                    )),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
