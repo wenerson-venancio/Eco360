@@ -26,18 +26,15 @@ class Company extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 1, right: 10),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              IconButton(
-                                  onPressed: null,
-                                  icon: BackButton(
-                                    color: Colors.white,
-                                  )),
-                              Text(
+                            children:  [
+                              IconButton(onPressed: () => Navigator.of(context).pop(), icon: const Icon(Icons.arrow_back_ios, color: Colors.white,)
+                              ),
+                              const Text(
                                 'Empresas',
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 16),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.more_vert,
                                 color: Colors.white,
                               )
@@ -57,9 +54,11 @@ class Company extends StatelessWidget {
                       child: Column(
                         children: [
                           GestureDetector(
-                            onTap: () => print('teste empresas'),
+                            onTap: () {
+                              Navigator.pushNamed(context, '/home');
+                            },
                             child: Container(
-                              height: 150,
+                              height: 170,
                               decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 241, 241, 241),
                                   borderRadius: BorderRadius.only(
@@ -93,20 +92,31 @@ class Company extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const SizedBox(height: 15,),
+                                    const SizedBox(
+                                      height: 15,
+                                    ),
                                     Row(
                                       children: [
                                         Container(
                                           child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               Container(
                                                 child: Container(
                                                   child: Column(
                                                     children: const [
                                                       Text(
-                                                        'CNPJ', style: TextStyle(fontSize: 13, color: Color.fromARGB(255, 60, 94, 116)),
-                                                      ), 
+                                                        'CNPJ',
+                                                        style: TextStyle(
+                                                            fontSize: 13,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    60,
+                                                                    94,
+                                                                    116)),
+                                                      ),
                                                     ],
                                                   ),
                                                 ),
@@ -117,42 +127,98 @@ class Company extends StatelessWidget {
                                               Container(
                                                 child: Column(
                                                   children: const [
-                                                    Text('000.000.0000-00', style: TextStyle(fontWeight: FontWeight.bold),)
+                                                    Text(
+                                                      '000.000.0000-00',
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.bold),
+                                                    )
                                                   ],
                                                 ),
                                               )
                                             ],
                                           ),
                                         ),
-                                        const SizedBox(width: 80,),
+                                        const SizedBox(
+                                          width: 80,
+                                        ),
                                         Container(
                                           child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               Container(
                                                 child: Column(
                                                   children: const [
-                                                    Text('Cidade', style: TextStyle(color: Color.fromARGB(
+                                                    Text(
+                                                      'Cidade',
+                                                      style: TextStyle(
+                                                          color: Color.fromARGB(
                                                               255,
                                                               60,
                                                               94,
-                                                              116)),)
+                                                              116)),
+                                                    )
                                                   ],
                                                 ),
                                               ),
-                                              const SizedBox(height: 5,),
+                                              const SizedBox(
+                                                height: 5,
+                                              ),
                                               Container(
                                                 child: Column(
                                                   children: const [
-                                                    Text('Cascavel', style: TextStyle(fontWeight: FontWeight.bold),)
+                                                    Text(
+                                                      'Cascavel',
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.bold),
+                                                    )
                                                   ],
                                                 ),
                                               )
                                             ],
                                           ),
-                                        )
+                                        ),
                                       ],
-                                    )
+                                    ),
+                                    const SizedBox(
+                                      height: 15,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Container(
+                                          child: Row(
+                                            children: const [
+                                              Text('Database',
+                                                  style: TextStyle(
+                                                      color: Color.fromARGB(
+                                                          255, 60, 94, 116)))
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(
+                                      height: 5,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Container(
+                                          child: Row(
+                                            children: const [
+                                              Text(
+                                                'Db1',
+                                                style: TextStyle(
+                                                    fontSize: 13,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ],
                                 ),
                               ),
@@ -162,7 +228,7 @@ class Company extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      height: 150,
+                      height: 170,
                       width: 13,
                       decoration: const BoxDecoration(
                           color: Color.fromARGB(255, 37, 70, 108),

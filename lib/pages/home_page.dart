@@ -36,26 +36,28 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25),
+                      padding: const EdgeInsets.only(left: 1, right: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Icon(
-                            Icons.arrow_back_ios,
-                            color: Colors.white,
-                          ),
-                          Text(
+                        children: [
+                          IconButton(
+                              onPressed: () => Navigator.of(context).pop(),
+                              icon: const Icon(
+                                Icons.arrow_back_ios,
+                                color: Colors.white,
+                              )),
+                          const Text(
                             'Menu',
                             style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
-                          Icon(
+                          const Icon(
                             Icons.more_vert,
                             color: Colors.white,
                           ),
                         ],
                       ),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 10),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 25),
                       child: Column(
