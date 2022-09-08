@@ -1,3 +1,4 @@
+import 'package:eco360/pages/empresa.dart';
 import 'package:eco360/pages/pagar_page.dart';
 import 'package:flutter/material.dart';
 import 'pages/caixa_page.dart';
@@ -26,8 +27,9 @@ class MyApp extends StatelessWidget {
         '/venda': (context) => const SalesPage(), 
         '/registradora': (context) => const RegisterPage(),
         '/estoque':(context) => const InventoryPage(),
+        '/empresa':(context) => const Company()
       },
-      initialRoute: '/home',
+      initialRoute: '/empresa',
       debugShowCheckedModeBanner: false,
     );
   }
