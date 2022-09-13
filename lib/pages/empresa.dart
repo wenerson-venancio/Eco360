@@ -11,7 +11,7 @@ class Company extends StatelessWidget {
     return Scaffold(
       appBar: _appBar(),
       body: Container(
-          color: Color.fromARGB(255, 231, 234, 236),
+          color: const Color.fromARGB(255, 231, 234, 236),
           child: Column(
             children: [
               Column(
@@ -26,15 +26,15 @@ class Company extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 1, right: 10),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children:  [
-                              IconButton(onPressed: () => Navigator.of(context).pop(), icon: const Icon(Icons.arrow_back_ios, color: Colors.white,)
+                            children: const [
+                              IconButton(onPressed: null, icon: Icon(Icons.arrow_back_ios, color: Colors.white,)
                               ),
-                              const Text(
+                               Text(
                                 'Empresas',
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 16),
                               ),
-                              const Icon(
+                              Icon(
                                 Icons.more_vert,
                                 color: Colors.white,
                               )
@@ -84,7 +84,7 @@ class Company extends StatelessWidget {
                                       child: Row(
                                         children: const [
                                           Text(
-                                            'Etty Calçados',
+                                            'JP Transportadora',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 16),
