@@ -4,8 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool _securityText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -46,32 +53,41 @@ class LoginPage extends StatelessWidget {
                     'Senha',
                     style: TextStyle(color: Color.fromARGB(255, 107, 128, 144)),
                   ),
-                  const TextField(
-                    decoration:
-                        InputDecoration(suffixIcon: Icon(MdiIcons.eyeOff)),
+                  TextField(
+                    decoration: InputDecoration(
+                        suffixIcon: IconButton(
+                            onPressed: () {
+                              setState(() {
+                                _securityText = !_securityText;
+                              });
+                            },
+                            icon: Icon(_securityText ? MdiIcons.eyeOff : MdiIcons.eyeOutline))),
+                            obscureText: _securityText,
                   ),
                   const SizedBox(
                     height: 40,
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        child: const Icon(MdiIcons.checkboxMarkedOutline,
-                            color: Color.fromARGB(255, 107, 128, 144)),
-                      ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Container(
-                        child: const Text(
-                          'Lembrar meus dados?',
-                          style: TextStyle(
+                  GestureDetector(
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          child: const Icon(MdiIcons.checkboxMarkedOutline,
                               color: Color.fromARGB(255, 107, 128, 144)),
                         ),
-                      )
-                    ],
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Container(
+                          child: const Text(
+                            'Lembrar meus dados?',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 107, 128, 144)),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 25,
@@ -129,14 +145,14 @@ class LoginPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 65,),
+                  const SizedBox(
+                    height: 65,
+                  ),
                   Container(
                     height: 34,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset('assets/eco_337x69px.png')
-                      ],
+                      children: [Image.asset('assets/eco_337x69px.png')],
                     ),
                   )
                 ],
