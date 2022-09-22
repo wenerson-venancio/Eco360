@@ -1,4 +1,6 @@
-// ignore_for_file: avoid_unnecessary_containers, sort_child_properties_last, sized_box_for_whitespace
+// ignore_for_file: avoid_unnecessary_containers, sort_child_properties_last, sized_box_for_whitespace, prefer_const_constructors
+
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -13,6 +15,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool _securityText = true;
+  bool _checkButton = false;
 
   @override
   Widget build(BuildContext context) {
@@ -61,31 +64,39 @@ class _LoginPageState extends State<LoginPage> {
                                 _securityText = !_securityText;
                               });
                             },
-                            icon: Icon(_securityText ? MdiIcons.eyeOff : MdiIcons.eyeOutline))),
-                            obscureText: _securityText,
+                            icon: Icon(_securityText
+                                ? MdiIcons.eyeOff
+                                : MdiIcons.eyeOutline))),
+                    obscureText: _securityText,
                   ),
                   const SizedBox(
                     height: 40,
                   ),
-                  GestureDetector(
+                  MaterialButton(
+                    splashColor: Color.fromARGB(255, 214, 219, 225),
+                    highlightColor: const Color.fromARGB(255, 217, 225, 232),
+                    onPressed: () {
+                      setState(() {
+                        _checkButton = !_checkButton;
+                      });
+                    },
                     child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          child: const Icon(MdiIcons.checkboxMarkedOutline,
+                        Icon(
+                          _checkButton
+                              ? MdiIcons.checkboxMarkedOutline
+                              : MdiIcons.checkboxBlankOutline,
+                          color: Color.fromARGB(255, 107, 128, 144),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          'Lembrar meus dados',
+                          style: TextStyle(
                               color: Color.fromARGB(255, 107, 128, 144)),
                         ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Container(
-                          child: const Text(
-                            'Lembrar meus dados?',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 107, 128, 144)),
-                          ),
-                        )
                       ],
                     ),
                   ),
