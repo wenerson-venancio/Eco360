@@ -2,9 +2,11 @@
 
 import 'dart:math';
 
+import 'package:eco360/pages/empresa.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -16,6 +18,9 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   bool _securityText = true;
   bool _checkButton = false;
+
+  String email = 'wenerson.venancio';
+  String password = '';
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +48,11 @@ class _LoginPageState extends State<LoginPage> {
                     'Usuário',
                     style: TextStyle(color: Color.fromARGB(255, 107, 128, 144)),
                   ),
-                  const TextField(
+                  TextField(
+                    onChanged: (text) {
+                      email = text;
+                    },
+                    keyboardType: TextInputType.emailAddress,
                     cursorHeight: 20,
                     decoration: InputDecoration(
                       border: UnderlineInputBorder(),
@@ -57,6 +66,9 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(color: Color.fromARGB(255, 107, 128, 144)),
                   ),
                   TextField(
+                    onChanged: (text) {
+                      password = text;
+                    },
                     decoration: InputDecoration(
                         suffixIcon: IconButton(
                             onPressed: () {
@@ -87,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                           _checkButton
                               ? MdiIcons.checkboxMarkedOutline
                               : MdiIcons.checkboxBlankOutline,
-                          color: Color.fromARGB(255, 107, 128, 144),
+                          color: Color.fromARGB(148, 107, 128, 144),
                         ),
                         SizedBox(
                           width: 10,
@@ -95,7 +107,8 @@ class _LoginPageState extends State<LoginPage> {
                         Text(
                           'Lembrar meus dados',
                           style: TextStyle(
-                              color: Color.fromARGB(255, 107, 128, 144)),
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromARGB(148, 107, 128, 144)),
                         ),
                       ],
                     ),
@@ -103,24 +116,36 @@ class _LoginPageState extends State<LoginPage> {
                   const SizedBox(
                     height: 25,
                   ),
-                  Column(
-                    children: [
-                      Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Text('Entrar',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 15)),
-                          ],
+                  GestureDetector(
+                    onTap: () {
+                      if (email == 'wenerson.venancio' &&
+                          password == 'eco456') {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Company())
+                        );
+                      } else {
+                        print('login incorreto');
+                      }
+                    },
+                    child: Column(
+                      children: [
+                        Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Text('Entrar',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 15)),
+                            ],
+                          ),
+                          height: 40,
+                          decoration: const BoxDecoration(
+                              color: Color.fromARGB(255, 27, 96, 156),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
                         ),
-                        height: 40,
-                        decoration: const BoxDecoration(
-                            color: Color.fromARGB(255, 27, 96, 156),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 30,
