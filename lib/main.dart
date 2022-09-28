@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         '/empresa':(context) => const Company(),
         '/login':(context) => const LoginPage(),
       },
-      initialRoute: '/login',
+      initialRoute: '/caixa',
       debugShowCheckedModeBanner: false,
     );
   }

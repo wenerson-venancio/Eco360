@@ -1,12 +1,10 @@
-// ignore_for_file: avoid_unnecessary_containers, sort_child_properties_last, sized_box_for_whitespace, prefer_const_constructors
-
-import 'dart:math';
+// ignore_for_file: avoid_unnecessary_containers, sort_child_properties_last, sized_box_for_whitespace, prefer_const_constructors, avoid_print
 
 import 'package:eco360/pages/empresa.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -55,6 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                     keyboardType: TextInputType.emailAddress,
                     cursorHeight: 20,
                     decoration: InputDecoration(
+                      fillColor: Colors.amber,
                       border: UnderlineInputBorder(),
                     ),
                   ),
@@ -70,15 +69,19 @@ class _LoginPageState extends State<LoginPage> {
                       password = text;
                     },
                     decoration: InputDecoration(
+                        focusColor: Color.fromARGB(255, 52, 97, 133),
                         suffixIcon: IconButton(
                             onPressed: () {
                               setState(() {
                                 _securityText = !_securityText;
                               });
                             },
-                            icon: Icon(_securityText
-                                ? MdiIcons.eyeOff
-                                : MdiIcons.eyeOutline))),
+                            icon: Icon(
+                              _securityText
+                                  ? MdiIcons.eyeOff
+                                  : MdiIcons.eyeOutline,
+                              color: Color.fromARGB(255, 52, 97, 133),
+                            ))),
                     obscureText: _securityText,
                   ),
                   const SizedBox(
@@ -100,12 +103,13 @@ class _LoginPageState extends State<LoginPage> {
                               ? MdiIcons.checkboxMarkedOutline
                               : MdiIcons.checkboxBlankOutline,
                           color: Color.fromARGB(148, 107, 128, 144),
+                          size: 19,
                         ),
                         SizedBox(
                           width: 10,
                         ),
                         Text(
-                          'Lembrar meus dados',
+                          'Lembrar meus dados?',
                           style: TextStyle(
                               fontWeight: FontWeight.w400,
                               color: Color.fromARGB(148, 107, 128, 144)),
@@ -121,10 +125,9 @@ class _LoginPageState extends State<LoginPage> {
                       if (email == 'wenerson.venancio' &&
                           password == 'eco456') {
                         Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => Company())
-                        );
+                            MaterialPageRoute(builder: (context) => Company()));
                       } else {
-                        print('login incorreto');
+                        _openDialog(context);
                       }
                     },
                     child: Column(
@@ -174,7 +177,7 @@ class _LoginPageState extends State<LoginPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         Text(
-                          'Versão: 1.1.1',
+                          'Versão: ',
                           style: TextStyle(
                               fontSize: 12, color: Color.fromARGB(94, 0, 0, 0)),
                         )
@@ -198,5 +201,17 @@ class _LoginPageState extends State<LoginPage> {
         ],
       ),
     );
+  }
+
+  _openDialog(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          MainAxisAlignment.center;
+          return CupertinoAlertDialog(
+            title: Text('Login'),
+            content: Text('Dados Inválidos'),
+          );
+        });
   }
 }

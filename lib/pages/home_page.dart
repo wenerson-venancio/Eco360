@@ -1,5 +1,4 @@
-// ignore_for_file: sort_child_properties_last, sized_box_for_whitespace
-import 'package:flutter/gestures.dart';
+// ignore_for_file: sort_child_properties_last, sized_box_for_whitespace, avoid_unnecessary_containers
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
